@@ -1,0 +1,1 @@
+window.REF_IMAGE_DATA=window.REF_IMAGE_DATA||{};window.REF_IMAGE_DATA.stage="data:image/jpeg;base64,";
