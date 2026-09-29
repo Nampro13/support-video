@@ -135,16 +135,17 @@ h1{font-size:clamp(34px,7vw,62px);line-height:1.02;letter-spacing:-.045em;margin
 .contactBlock summary:after{content:"＋";float:right;color:var(--muted);font-size:14px}
 .contactBlock[open] summary:after{content:"−"}
 .contactHint{padding:0 14px 8px;color:var(--muted);font-size:10px}
-.contactTableWrap{padding:0 12px 12px}
-.contactTable{width:100%;border-collapse:collapse;font-size:11px}
-.contactTable th,.contactTable td{padding:7px 5px;border-top:1px solid #edf1f5}
-.contactTable th{font-size:9px;color:#94a3b8;font-weight:800;text-align:left}
-.contactTable th:first-child,.contactTable td:first-child{width:34px;color:#94a3b8}
-.contactTable td:last-child{font-weight:850;color:#334155}
+.contactGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:0 12px 12px}
+.contactCard{display:flex;flex-direction:column;gap:2px;padding:9px 10px;border:1px solid #e7ebf0;border-radius:10px;background:#f9fafc;color:#334155;text-decoration:none;min-width:0}
+.contactCard b{font-size:11px;line-height:1.2}
+.contactCard span{font-size:9px;color:#768397;white-space:nowrap;font-variant-numeric:tabular-nums}
 @media(max-width:640px){
   .assigneebadge{min-width:27px;height:18px;font-size:8px;padding:0 5px}
   .refCaution{font-size:10px}
-  .contactTable{font-size:10px}
+  .contactGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:0 10px 10px}
+  .contactCard{padding:8px 7px}
+  .contactCard b{font-size:10px}
+  .contactCard span{font-size:8px}
 }
 
 </style>
@@ -271,20 +272,15 @@ h1{font-size:clamp(34px,7vw,62px);line-height:1.02;letter-spacing:-.045em;margin
 </div>
 
 <details class="contactBlock">
-  <summary>긴급연락망 · 6명</summary>
-  <div class="contactHint">비고 · 행사 운영 중 긴급 연락용 / 전화번호는 내부 연락망에서 별도 관리</div>
-  <div class="contactTableWrap">
-    <table class="contactTable">
-      <thead><tr><th>순서</th><th>이름</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>안호영</td></tr>
-        <tr><td>2</td><td>소영섭</td></tr>
-        <tr><td>3</td><td>남경선</td></tr>
-        <tr><td>4</td><td>유혜진</td></tr>
-        <tr><td>5</td><td>김윤진</td></tr>
-        <tr><td>6</td><td>임이랑</td></tr>
-      </tbody>
-    </table>
+  <summary>긴급연락망 · 눌러서 보기</summary>
+  <div class="contactHint">비고 · 행사 운영 중 긴급 연락용</div>
+  <div class="contactGrid">
+    <a class="contactCard" href="tel:01042340057"><b>안호영</b><span>010-4234-0057</span></a>
+    <a class="contactCard" href="tel:01026732500"><b>소영섭</b><span>010-2673-2500</span></a>
+    <a class="contactCard" href="tel:01049078037"><b>남경선</b><span>010-4907-8037</span></a>
+    <a class="contactCard" href="tel:01087568032"><b>유혜진</b><span>010-8756-8032</span></a>
+    <a class="contactCard" href="tel:01056721704"><b>김윤진</b><span>010-5672-1704</span></a>
+    <a class="contactCard" href="tel:01089573234"><b>임이랑</b><span>010-8957-3234</span></a>
   </div>
 </details>
 
