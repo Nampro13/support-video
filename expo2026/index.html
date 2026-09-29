@@ -137,9 +137,10 @@ h1{font-size:clamp(34px,7vw,62px);line-height:1.02;letter-spacing:-.045em;margin
 .contactHint{padding:0 14px 8px;color:var(--muted);font-size:10px}
 .contactTableWrap{padding:0 12px 12px}
 .contactTable{width:100%;border-collapse:collapse;font-size:11px}
-.contactTable td{padding:7px 5px;border-top:1px solid #edf1f5}
-.contactTable td:first-child{font-weight:850;color:#334155}
-.contactTable td:last-child{text-align:right;color:#94a3b8;width:20px}
+.contactTable th,.contactTable td{padding:7px 5px;border-top:1px solid #edf1f5}
+.contactTable th{font-size:9px;color:#94a3b8;font-weight:800;text-align:left}
+.contactTable th:first-child,.contactTable td:first-child{width:34px;color:#94a3b8}
+.contactTable td:last-child{font-weight:850;color:#334155}
 @media(max-width:640px){
   .assigneebadge{min-width:27px;height:18px;font-size:8px;padding:0 5px}
   .refCaution{font-size:10px}
@@ -274,13 +275,14 @@ h1{font-size:clamp(34px,7vw,62px);line-height:1.02;letter-spacing:-.045em;margin
   <div class="contactHint">비고 · 행사 운영 중 긴급 연락용 / 전화번호는 내부 연락망에서 별도 관리</div>
   <div class="contactTableWrap">
     <table class="contactTable">
+      <thead><tr><th>순서</th><th>이름</th></tr></thead>
       <tbody>
-        <tr><td>안호영</td><td>1</td></tr>
-        <tr><td>소영섭</td><td>2</td></tr>
-        <tr><td>남경선</td><td>3</td></tr>
-        <tr><td>유혜진</td><td>4</td></tr>
-        <tr><td>김윤진</td><td>5</td></tr>
-        <tr><td>임이랑</td><td>6</td></tr>
+        <tr><td>1</td><td>안호영</td></tr>
+        <tr><td>2</td><td>소영섭</td></tr>
+        <tr><td>3</td><td>남경선</td></tr>
+        <tr><td>4</td><td>유혜진</td></tr>
+        <tr><td>5</td><td>김윤진</td></tr>
+        <tr><td>6</td><td>임이랑</td></tr>
       </tbody>
     </table>
   </div>
