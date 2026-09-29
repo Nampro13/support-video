@@ -148,6 +148,18 @@ h1{font-size:clamp(34px,7vw,62px);line-height:1.02;letter-spacing:-.045em;margin
   .contactCard span{font-size:8px}
 }
 
+
+@media(max-width:640px){
+  .refGuideCard img{display:none}
+  .refGuideCard:before{display:flex;align-items:center;justify-content:center;aspect-ratio:16/7;background:linear-gradient(135deg,#eef5fb,#e3edf7);color:#45627f;font-size:20px;font-weight:950;letter-spacing:.04em;border-bottom:1px solid var(--line)}
+  .refGuideCard[data-refguide="official"]:before{content:"공식행사"}
+  .refGuideCard[data-refguide="stage"]:before{content:"메인무대"}
+  .refGuideCard[data-refguide="vip"]:before{content:"VIP 투어"}
+  .refGuideCard[data-refguide="sketch"]:before{content:"전시장 스케치"}
+  .refPhotoGrid{display:none}
+  .refFolderLink{margin-top:4px}
+}
+
 </style>
 </head>
 <body>
