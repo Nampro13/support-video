@@ -76,16 +76,25 @@ main{padding:26px 0 70px}.screen{display:none}.screen.on{display:block}.metrics{
  .field-head{margin-bottom:7px}.field-head p{font-size:10px}.field-chip{margin-top:4px;padding:4px 8px;font-size:9px}.field-toolbar{margin-bottom:8px}.field-kpis{margin-bottom:6px}.field-kpis b{font-size:19px}.field-kpis small{font-size:9px}.field-console{margin-top:10px}.field-person-heading{padding:2px 0 6px}
  .daybar{margin-top:18px;margin-bottom:9px}.daybar h2{font-size:15px}.field-reference .venue-chronology{overflow:hidden}
 }
+
+/* v1.0.1 · Above-the-fold calltime hierarchy / no changes to field state or event data. */
+.calltime-alert{display:flex;align-items:stretch;gap:0;background:#14243c;color:#fff;border:2px solid #ef9a48;border-radius:16px;overflow:hidden;margin:0 0 20px;box-shadow:0 8px 25px #12243c19}
+.calltime-main{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-width:235px;padding:17px 24px;background:#a94d11}
+.calltime-label{font-weight:850;font-size:11px;letter-spacing:.04em;color:#fff3e4}.calltime-hour{font-weight:950;font-size:clamp(48px,6vw,74px);line-height:1.02;letter-spacing:-.045em;margin:5px 0}.calltime-title{font-size:16px;font-weight:900}
+.calltime-detail{padding:18px 23px;display:flex;flex-direction:column;justify-content:center;gap:6px;font-size:13px}.calltime-detail b{font-size:17px}.calltime-detail>span{color:#dce8f7}.calltime-detail .calltime-prep{margin-top:4px;font-weight:850;color:#ffdc9d}
+.missiongrid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.mission-card.priority{grid-row:auto;grid-column:1/-1}.mission-card.support,.mission-card.info{height:100%}
+@media(max-width:680px){.calltime-alert{margin-bottom:15px;flex-direction:column}.calltime-main{min-width:0;padding:13px 17px;flex-direction:row;align-items:center;gap:10px;flex-wrap:wrap}.calltime-hour{font-size:43px;margin:0}.calltime-label{flex-basis:100%;font-size:10px}.calltime-title{font-size:14px}.calltime-detail{padding:12px 17px;font-size:12px;gap:4px}.calltime-detail b{font-size:14px}.missiongrid{display:block}.mission-card.priority{grid-column:auto}}
 </style></head>
 <body>
 <header><div class="wrap mast"><div class="brand"><div class="brandname">DAWON CONTENTS LAB <span style="color:#5ce1d4">/</span> CREWBOARD</div><div class="version">OFFICIAL 01 · v1.0.0</div></div><div class="hero-eyebrow">OSCO · FIELD OPERATIONS</div><h1 class="hero-title">중소기업 혁신주간 <span>촬영 운영보드</span></h1><div class="hero-meta"><div class="hero-chip">11.18 수 — 11.19 목</div><div class="hero-chip">남경선 + 유혜진 (18일만)</div></div></div></header>
 <div class="sync-strip"><div class="wrap sync-inner"><span><strong>현장 운영본 · 가배정</strong><small>수정사항은 이 기기에만 저장 · 다른 기기와 자동 공유되지 않음</small></span><button type="button" id="sync-mobile-toggle" aria-expanded="false" aria-controls="sync-mobile-actions">데이터 관리 ▾</button><div class="sync-actions" id="sync-mobile-actions"><button type="button" id="download-field-json" title="현장 업무·부스 상태 파일 저장">백업 내보내기</button><label class="sync-import-label">백업 불러오기<input type="file" id="import-field-json" accept="application/json,.json" hidden></label><button type="button" id="reset-field-state">초기안 복원</button></div></div></div><div class="tabbar"><nav class="wrap tabs" aria-label="크루보드 화면"><button class="tab on" data-screen="overview">브리핑</button><button class="tab" data-screen="day1">11.18 수</button><button class="tab" data-screen="day2">11.19 목</button><button class="tab" data-screen="booths">부스 27</button><button class="tab" data-screen="site">도면·현장</button><button class="tab" data-screen="sources">출처·확인</button></nav></div>
 <main class="wrap">
 <section id="overview" class="screen on">
+  <div class="calltime-alert" role="note" aria-label="11월 18일 필수 콜타임"><div class="calltime-main"><span class="calltime-label">11.18 WED · 촬영팀 필수 집합</span><strong class="calltime-hour">08:00</strong><span class="calltime-title">콜타임 확정</span></div><div class="calltime-detail"><b>남경선 · 유혜진 / 2인</b><span>OSCO 현장 · 정확한 집합 위치 및 출입 방식은 별도 확인</span><span class="calltime-prep">준비사항 · 205·206호 단체사진용 사다리 준비 요청</span></div></div>
   <div class="missionhead"><div><div class="eyebrow">NEXT FIELD DAY / 11.18 WED</div><h2>수요일, 촬영팀이 먼저 확인할 것</h2><p><b>08:00 촬영팀 콜타임</b> · 동시 진행 프로그램 2개 · 촬영자 2명</p></div><span class="mission-status">현장 가배정안 · 수정 가능</span></div>
   <div class="missiongrid">
     <div class="mission-card priority">
-      <div class="mission-kicker">01 / 08:00 콜타임 · 우선 결정</div>
+      <div class="mission-kicker">01 / 촬영 구역 배치 확인</div>
       <h3>촬영자별 임시 배치 확인</h3>
       <div class="mission-routes">
         <div><b>13:00—17:00</b><strong>205·206호</strong><small>지역협의체 전체대회</small></div>
@@ -95,7 +104,7 @@ main{padding:26px 0 70px}.screen{display:none}.screen.on{display:block}.metrics{
       <button type="button" class="mission-btn" data-crew-jump="day1">18일 촬영 업무표 · 현장 수정 →</button>
     </div>
     <div class="mission-card support">
-      <div class="mission-kicker">02 / 필수 준비 · 촬영 누락 예방</div>
+      <div class="mission-kicker">02 / 준비물 · 촬영 누락 예방</div>
       <h3>사다리 준비 요청 · 205·206호</h3><p><b>11/18(수) 높은 시점 단체사진용</b>으로 사다리 준비 요청. 사다리 확보 여부 및 현장 반입·안전 사용 가능 여부 확인 필요.</p><h3>27개 기관·기업 / 40부스</h3>
       <p>행사 중 필수 프로그램과 동선이 겹치므로 오전 부스 촬영을 <b>제안</b>. 실제 촬영 허용 시간은 미확정, 담당은 가배정 제안.</p>
       <div class="support-foot"><span>이 기기 기준 체크리스트</span><button type="button" class="mission-btn secondary" data-crew-jump="booths">부스 목록 보기 →</button></div>
